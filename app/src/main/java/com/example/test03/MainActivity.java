@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,6 +51,39 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        RadioGroup rg = findViewById(R.id.rg);
+        
+        rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if (radioGroup.getCheckedRadioButtonId()==R.id.rb_BS) {
+                    Toast.makeText(MainActivity.this, "شما در مقطع کارشناسی هستید.", Toast.LENGTH_SHORT).show();
+                }
+                else if (radioGroup.getCheckedRadioButtonId()==R.id.rb_MS) {
+                    Toast.makeText(MainActivity.this, "شما در مقطع کارشناسی ارشد هستید.", Toast.LENGTH_SHORT).show();
+                }
+
+//                final int bs = R.id.rb_BS;
+//                final int ms = R.id.rb_MS;
+//                int selected = radioGroup.getCheckedRadioButtonId();
+
+//                switch (selected) {
+//                    case bs:
+//                        Toast.makeText(MainActivity.this, "کارشناسی", Toast.LENGTH_SHORT).show();
+//                        break;
+//                    case ms:
+//                        Toast.makeText(MainActivity.this, "کارشناسی ارشد", Toast.LENGTH_SHORT).show();
+//                        break;
+//
+//                    default:
+//                        Toast.makeText(MainActivity.this, "لطفا مقطع تحصیلی خود را انتخاب کنید.", Toast.LENGTH_SHORT).show();
+//
+//
+//                }
+            
+            }
+        });
+        
 
 
     }

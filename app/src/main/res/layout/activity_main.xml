@@ -52,6 +52,25 @@
         android:inputType="textEmailAddress"
         android:padding="4dp" />
 
+    <RadioGroup
+        android:id="@+id/rg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <RadioButton
+            android:id="@+id/rb_BS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="کارشناسی" />
+
+        <RadioButton
+            android:id="@+id/rb_MS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="کارشناسی ارشد" />
+    </RadioGroup>
+
     <CheckBox
         android:id="@+id/chkAccept"
         android:layout_width="match_parent"

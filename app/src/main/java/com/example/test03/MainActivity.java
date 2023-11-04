@@ -24,17 +24,25 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
-        TextView txt = findViewById(R.id.txt1);
-        Button btn = findViewById(R.id.btn5);
 
 
-        btn.setOnClickListener(new View.OnClickListener() {
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        View layout = binding.getRoot();
+        setContentView(layout);
+
+//        setContentView(R.layout.activity_main);
+
+
+
+        binding.txt1.setText("");
+
+        binding.btn5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                txt.setText(txt.getText()+"5");
+                binding.txt1.setText(binding.txt1.getText()+"6");
             }
         });
+
+
     }
 }

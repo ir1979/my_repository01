@@ -5,6 +5,9 @@ plugins {
 android {
     namespace 'com.example.test03'
     compileSdk 34
+    viewBinding {
+        enabled= true;
+    }
 
     defaultConfig {
         applicationId "com.example.test03"

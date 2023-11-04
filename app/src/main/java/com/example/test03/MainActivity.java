@@ -12,14 +12,27 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.test03.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
+
+    private ActivityMainBinding binding;
 
     final String TAG = "MyTag";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        View root = binding.getRoot();
+        setContentView(root);
+
+
+
+        //setContentView(R.layout.activity_main);
         Log.i(TAG, "Salam, It is starting here... ");
+
+        
 
         EditText txtNum1 = findViewById(R.id.txtNum1);
         EditText txtNum2 = findViewById(R.id.txtNum2);

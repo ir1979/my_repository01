@@ -4,24 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="8dp"
     android:orientation="vertical"
-    android:weightSum="7"
-    tools:context=".CalculatorActivity">
+    android:weightSum="6"
+    tools:context=".MainActivity2">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="2"
+        android:layout_weight="1"
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/txtEdit"
+            android:id="@+id/edtCalculation"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
+            android:layout_margin="8dp"
             android:layout_weight="1"
             android:ems="10"
             android:gravity="right|top"
-            android:inputType="text" />
+            android:inputType="text"
+            android:padding="8dp"
+            android:text="0"
+            android:textSize="32sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -31,15 +36,15 @@
         android:orientation="horizontal">
 
         <TextView
-            android:id="@+id/txtResult"
+            android:id="@+id/txtresult"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_margin="4dp"
+            android:layout_margin="8dp"
             android:layout_weight="1"
-            android:gravity="center|right"
-            android:padding="4dp"
-            android:text="TextView"
-            android:textSize="20sp" />
+            android:gravity="right|center_vertical"
+            android:padding="8dp"
+            android:text="0"
+            android:textSize="32sp" />
     </LinearLayout>
 
     <LinearLayout
@@ -56,44 +61,40 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/button7"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="-"
+                android:text="Button"
                 app:cornerRadius="0dp" />
 
             <Button
-                android:id="@+id/button2"
+                android:id="@+id/button8"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="*"
-                app:cornerRadius="5dp" />
+                android:text="Button"
+                app:cornerRadius="0dp" />
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/button9"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="/"
-                app:cornerRadius="5dp" />
+                android:text="Button"
+                app:cornerRadius="0dp" />
 
             <Button
-                android:id="@+id/btnExe"
+                android:id="@+id/button10"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="Exe"
-                app:cornerRadius="5dp" />
+                android:text="Button"
+                app:cornerRadius="0dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -103,44 +104,40 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/button11"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="+"
-                app:cornerRadius="5dp" />
+                android:text="Button"
+                app:cornerRadius="0dp" />
 
             <Button
-                android:id="@+id/btn7"
+                android:id="@+id/button12"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="7"
-                app:cornerRadius="5dp" />
+                android:text="Button"
+                app:cornerRadius="0dp" />
 
             <Button
-                android:id="@+id/btn8"
+                android:id="@+id/button13"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="8"
-                app:cornerRadius="5dp" />
+                android:text="Button"
+                app:cornerRadius="0dp" />
 
             <Button
-                android:id="@+id/btn9"
+                android:id="@+id/button14"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="9"
-                app:cornerRadius="5dp" />
+                android:text="Button"
+                app:cornerRadius="0dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -150,44 +147,40 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btnClear"
+                android:id="@+id/button15"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="Clear"
-                app:cornerRadius="5dp" />
+                android:text="Button"
+                app:cornerRadius="0dp" />
 
             <Button
-                android:id="@+id/btn4"
+                android:id="@+id/button16"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="4"
-                app:cornerRadius="5dp" />
+                android:text="Button"
+                app:cornerRadius="0dp" />
 
             <Button
-                android:id="@+id/btn5"
+                android:id="@+id/button17"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="5"
-                app:cornerRadius="5dp" />
+                android:text="Button"
+                app:cornerRadius="0dp" />
 
             <Button
-                android:id="@+id/btn6"
+                android:id="@+id/button18"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="6"
-                app:cornerRadius="5dp" />
+                android:text="Button"
+                app:cornerRadius="0dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -197,44 +190,40 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/btn0"
+                android:id="@+id/button19"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="0"
-                app:cornerRadius="5dp" />
+                android:text="Button"
+                app:cornerRadius="0dp" />
 
             <Button
-                android:id="@+id/btn1"
+                android:id="@+id/button20"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="1"
-                app:cornerRadius="5dp" />
+                android:text="Button"
+                app:cornerRadius="0dp" />
 
             <Button
-                android:id="@+id/btn2"
+                android:id="@+id/button21"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="2"
-                app:cornerRadius="5dp" />
+                android:text="Button"
+                app:cornerRadius="0dp" />
 
             <Button
-                android:id="@+id/btn3"
+                android:id="@+id/button22"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:padding="1dp"
-                android:text="3"
-                app:cornerRadius="5dp" />
+                android:text="Button"
+                app:cornerRadius="0dp" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

@@ -14,33 +14,35 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//
-//        Button btn1 = findViewById(R.id.btnCalculator);
-//
-//        btn1.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent calcIntent = new Intent(MainActivity.this, CalculatorActivity.class);
-//                startActivity(calcIntent);
-//
-//            }
-//        });
 
+        Button btn1 = findViewById(R.id.btnCalculator);
 
-
-        Button btn2 = findViewById(R.id.btnCalculator2);
-
-        btn2.setOnClickListener(new View.OnClickListener() {
+        btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent it2 = new Intent(MainActivity.this, MainActivity2.class);
-                startActivity(it2);
+                Intent calcIntent = new Intent(MainActivity.this, CalculatorActivity.class);
+                startActivity(calcIntent);
             }
         });
 
+        Button btnStudentList = findViewById(R.id.btnStudentsList);
 
+        btnStudentList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent stdIntent = new Intent(MainActivity.this, StudentActivity.class);
+                startActivity(stdIntent);
+            }
+        });
 
-
-
+        Button btnProductList = findViewById(R.id.btnProductList);
+        btnProductList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent productIntent = new Intent(MainActivity.this,
+                        ProductActivity.class);
+                startActivity(productIntent);
+            }
+        });
     }
 }

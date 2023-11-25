@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/laypout1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
@@ -22,9 +21,21 @@
         android:text="Calculator" />
 
     <Button
-        android:id="@+id/btnCalculator2"
+        android:id="@+id/btnCenterInParent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calculator 2" />
+        android:text="Center In Parent" />
+
+    <Button
+        android:id="@+id/btnStudentsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Students" />
+
+    <Button
+        android:id="@+id/btnProductList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Products" />
 
 </LinearLayout>

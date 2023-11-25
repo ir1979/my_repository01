@@ -10,8 +10,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class CalculatorActivity extends AppCompatActivity {
-
-
     Button btn0, btn1, btn2, btn3, btnClear, btnExe;
     TextView txtResult;
     EditText txtCalc;

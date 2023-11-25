@@ -22,11 +22,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent calcIntent = new Intent(MainActivity.this, CalculatorActivity.class);
                 startActivity(calcIntent);
-
             }
         });
 
+        Button btnStudentList = findViewById(R.id.btnStudentsList);
 
+        btnStudentList.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent stdIntent = new Intent(MainActivity.this, StudentActivity.class);
+                startActivity(stdIntent);
+            }
+        });
 
 
     }

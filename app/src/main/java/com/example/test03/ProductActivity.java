@@ -1,13 +1,11 @@
 package com.example.test03;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.widget.ListView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ProductActivity extends AppCompatActivity {
 
@@ -16,19 +14,21 @@ public class ProductActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product);
 
+        ArrayList<Product> products = new ArrayList<>();
+        products.add(new Product("Car1", 123L, R.drawable.car));
+        products.add(new Product("Ball1", 123L, R.drawable.ball));
+        products.add(new Product("Bicycle1", 123L, R.drawable.bicycle));
+        products.add(new Product("Computer1", 123L, R.drawable.computer));
 
-        List<Student> studentList = new ArrayList<>();
-        studentList.add(new Student("John Doe", 20));
-        studentList.add(new Student("Jane Smith", 22));
+
+        ListView lstProducts = findViewById(R.id.lstProducts);
+
+        ProductAdapter pa = new ProductAdapter(this, products);
+        lstProducts.setAdapter(pa);
+
+        pa.notifyDataSetChanged();
 
 
-        //RecyclerView rv = findViewById(R.id.rvStudents);
-        ListView lstStudents = findViewById(R.id.lstStudents);
-
-        StudentAdapter adapter2 = new StudentAdapter(this, studentList);
-        lstStudents.setAdapter(adapter2);
-
-        adapter2.notifyDataSetChanged();
 
     }
 }

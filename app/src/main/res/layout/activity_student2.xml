@@ -4,11 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".ProductActivity">
+    tools:context=".Student2Activity">
 
     <ListView
-        android:id="@+id/lstProducts"
+        android:id="@+id/lstStudents"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvStudents"
         android:layout_width="391dp"
-        android:layout_height="805dp" />
+        android:layout_height="805dp" >
+
+    </androidx.recyclerview.widget.RecyclerView>
 </LinearLayout>

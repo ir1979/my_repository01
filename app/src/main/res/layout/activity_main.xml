@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/btnAli"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
@@ -33,9 +34,53 @@
         android:text="Students" />
 
     <Button
-        android:id="@+id/btnProductList"
+        android:id="@+id/btnStudents2List"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Students2" />
+
+    <Button
+        android:id="@+id/btnProductsList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Products" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <Button
+            android:id="@+id/btnFatemeh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Fatemeh" />
+
+        <Button
+            android:id="@+id/btnHasan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Hasan" />
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lstView3"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" >
+
+    </ListView>
+
+    <Button
+        android:id="@+id/btnAddName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:longClickable="true"
+        android:text="Add Name" />
 
 </LinearLayout>

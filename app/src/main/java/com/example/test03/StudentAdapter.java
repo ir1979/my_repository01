@@ -37,7 +37,7 @@ public class StudentAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         if (convertView==null) {
-            convertView = inflater.inflate(R.layout.product, parent, false);
+            convertView = inflater.inflate(R.layout.list_item_student, parent, false);
         }
 
         TextView txtName = convertView.findViewById(R.id.txtName);

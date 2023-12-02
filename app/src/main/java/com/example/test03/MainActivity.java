@@ -1,15 +1,19 @@
 package com.example.test03;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -25,6 +29,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
+        SharedPreferences pref = getSharedPreferences("myPref", MODE_PRIVATE);
+        int i = pref.getInt("txtNumber", 0);
+        EditText edtTxt = findViewById(R.id.edtNumber);
+        edtTxt.setText(String.valueOf(i));
+
+
 
         Button btn1 = findViewById(R.id.btnCalculator);
 
@@ -166,8 +178,51 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        Button btnAdder = findViewById(R.id.btnAdder);
+        btnAdder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
 
+                Intent it = new Intent(MainActivity.this, ActivityAdder.class);
+                EditText edtNumber = findViewById(R.id.edtNumber);
+                int number = Integer.parseInt(edtNumber.getText().toString());
+                it.putExtra("Number", number);
+
+                SharedPreferences pref = getSharedPreferences("myPref", MODE_PRIVATE);
+                SharedPreferences.Editor editor = pref.edit();
+                editor.putInt("txtNumber", number);
+                editor.apply();
+
+                Toast.makeText(MainActivity.this, pref.getInt("txtNumber", 0) + "", Toast.LENGTH_SHORT).show();
+
+                startActivityForResult(it, 555);
+            }
+        });
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode==555 && resultCode==RESULT_OK) {
+            int returnValue = data.getExtras().getInt("Computed");
+            Toast.makeText(this, returnValue + "", Toast.LENGTH_LONG).show();
+
+            AlertDialog.Builder bl = new AlertDialog.Builder(this)
+                    .setTitle("The result" + returnValue)
+                    .setPositiveButton("Good", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialogInterface, int i) {
+                            Toast.makeText(MainActivity.this, "ok", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+            bl.create().show();
+
+
+        }
 
 
     }

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/btnAli"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -13,43 +14,56 @@
         android:id="@+id/txt1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="TextView"
+        android:visibility="gone"
+        tools:visibility="gone" />
 
     <Button
         android:id="@+id/btnCalculator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Calculator" />
+        android:text="Calculator"
+        android:visibility="gone"
+        tools:visibility="gone" />
 
     <Button
         android:id="@+id/btnCenterInParent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Center In Parent" />
+        android:text="Center In Parent"
+        android:visibility="gone"
+        tools:visibility="gone" />
 
     <Button
         android:id="@+id/btnStudentsList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Students" />
+        android:text="Students"
+        android:visibility="gone"
+        tools:visibility="gone" />
 
     <Button
         android:id="@+id/btnStudents2List"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Students2" />
+        android:text="Students2"
+        android:visibility="gone"
+        tools:visibility="gone" />
 
     <Button
         android:id="@+id/btnProductsList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Products" />
+        android:text="Products"
+        android:visibility="gone"
+        tools:visibility="gone" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="horizontal"
+        android:visibility="gone"
         android:weightSum="5">
 
         <Button
@@ -57,21 +71,27 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="Fatemeh" />
+            android:text="Fatemeh"
+            android:visibility="gone"
+            tools:visibility="gone" />
 
         <Button
             android:id="@+id/btnHasan"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="Hasan" />
+            android:text="Hasan"
+            android:visibility="gone"
+            tools:visibility="gone" />
 
     </LinearLayout>
 
     <ListView
         android:id="@+id/lstView3"
         android:layout_width="match_parent"
-        android:layout_height="300dp" >
+        android:layout_height="300dp"
+        android:visibility="gone"
+        tools:visibility="gone">
 
     </ListView>
 
@@ -81,6 +101,21 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:longClickable="true"
-        android:text="Add Name" />
+        android:text="Add Name"
+        android:visibility="gone"
+        tools:visibility="gone" />
+
+    <EditText
+        android:id="@+id/edtNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/btnAdder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Adder" />
 
 </LinearLayout>
